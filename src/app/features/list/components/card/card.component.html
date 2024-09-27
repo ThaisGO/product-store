@@ -1,0 +1,17 @@
+<mat-card appearance="outlined">
+    <mat-card-header>
+        <!-- Diferente: para acessar uma propriedade de uma interface(obj) precisamos usar a função do Signal -->
+        <!-- OBS: o input nos retorna um Signal. -->
+        <!-- <mat-card-title> {{ product()?.title }}</mat-card-title> -->
+
+        <!-- Ao adicionar o required no componente ts, podemos reirar a '?', já que a variável não mais retornará undefined -->
+        <!-- <mat-card-title> {{ product().title }}</mat-card-title> -->
+
+        <!-- Usando o signal de computed para dar um spread nos atributos do objeto -->
+        <mat-card-title> {{ productTitle() }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-actions>
+        <button mat-button>Editar</button>
+        <button mat-button>Deletar</button>
+    </mat-card-actions>
+</mat-card>

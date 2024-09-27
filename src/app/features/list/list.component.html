@@ -1,7 +1,7 @@
-<p>list works!</p>
-
 <ul>
     @for (product of products; track product.id) {
-        <li>{{ product.title }}</li>
+        <!-- nova maneira de usar inputs no angular
+        Novamente parecido com Vue -->
+        <app-card [product]="product"></app-card>
     }
 </ul>
